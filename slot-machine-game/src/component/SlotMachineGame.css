@@ -1,0 +1,79 @@
+/* Reset some browser-specific styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Center everything inside the app container */
+  .slotMachine {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    animation: bounce 1s ease-in-out infinite;
+  }
+  
+  /* Adding some space between components */
+  .slot_inner {
+    margin-top: 15px;
+  }
+  
+  /* Slot machine heading styles */
+  h2 {
+    margin-bottom: 20px;
+    color: #444;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  
+  /* Slot results styling */
+  h1 {
+    font-size: 32px;
+    margin: 5px 0;
+    color: #333;
+  }
+  
+  /* Bold color difference for matching or not matching result */
+  .slot_inner h1:last-child {
+    color: #ff6347;
+  }
+  
+  /* Style for the spin button */
+  .spinButton {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .spinButton:hover {
+    background-color: #45a049;
+  }
+  
+  /* Animation to make the slot box more engaging */
+  @keyframes bounce {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  

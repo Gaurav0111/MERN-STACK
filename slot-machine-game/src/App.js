@@ -1,25 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import SlotMachineGame from './component/SlotMachineGame';
 
-function App() {
+const SlotM = (parameter) => {
+  // let x = 'A';
+  // let y = 'A';
+  // let z = 'A';
+
+  if ((parameter.x === parameter.y) && (parameter.y === parameter.z)) {
+    return (
+      <div className='slot_inner' >
+        <h1>
+          {parameter.x} {parameter.y} {parameter.z}
+        </h1>
+        <h1> This is Matching. </h1>
+      </div>
+    );
+  } else {
+    return (
+      <div className='slot_inner' >
+        <h1>
+          {parameter.x} {parameter.y} {parameter.z}
+        </h1>
+        <h1> This is Not Matching. </h1>
+      </div>
+    );
+  }
+}
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <h2>Welcome to  <span style={{ fontWeight: 'bold' }} > Slot Machine Game</span></h2>
+      <div className='slotMachine' >
+        <SlotM x='A' y='A' z='A' />
+      </div> */}
+      <SlotMachineGame />
+    </>
   );
 }
+
 
 export default App;
