@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './SlotMachineGame.css';
 
-// Slot component to display the results
 const SlotM = ({ x, y, z }) => {
   const isMatching = (x === y) && (y === z);
   return (
@@ -12,7 +11,6 @@ const SlotM = ({ x, y, z }) => {
   );
 };
 
-// Main App component
 const SlotMachineGame = () => {
   const [slots, setSlots] = useState({ x: 'A', y: 'A', z: 'A' });
 
