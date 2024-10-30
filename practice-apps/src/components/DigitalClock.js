@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../assets/css/DigitalClock.css';
 
-
 const DigitalClock = () => {
+    const [cTime, setcTime] = useState(new Date().toLocaleTimeString());
 
-    let curDare = new Date().toLocaleTimeString();
-    const [cTime, setcTime] = useState(curDare);
-    const updateTime = () => {
-        curDare = new Date().toLocaleTimeString();
-        setcTime(curDare);
-    }
-    setInterval(updateTime, 1000);
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setcTime(new Date().toLocaleTimeString());
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []);
+
     return (
-        <>
-            <h1>{cTime}</h1>
-        </>
+        <div className="clock-container">
+            <header>React Digital Clock</header>
+            <h1 className="time-display">{cTime}</h1>
+        </div>
     );
-}
+};
 
 export default DigitalClock;
