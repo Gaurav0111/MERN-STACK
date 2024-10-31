@@ -16,8 +16,13 @@ const ToDoList = () => {
         setList('')
     }
 
-    const deleteItems = () => {
+    const deleteItems = (id) => {
         console.log("deleted");
+        setItems((oldItems) => {
+            return oldItems.filter((arrEle, index) => {
+                return index !== id;
+            })
+        })
     }
 
     return (
