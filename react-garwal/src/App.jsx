@@ -4,13 +4,13 @@ import { NetflixSeries } from "./components/NetflixSeries";
 
 export default function App() {
   return (
-    <React.Fragment>
+    <>
+      <NetflixSeries />
+      {/* <NetflixSeries />
       <NetflixSeries />
       <NetflixSeries />
-      <NetflixSeries />
-      <NetflixSeries />
-      <NetflixSeries />
-    </React.Fragment>
+      <NetflixSeries /> */}
+    </>
   )
 }
 
