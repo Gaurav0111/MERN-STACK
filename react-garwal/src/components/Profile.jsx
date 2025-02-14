@@ -19,6 +19,7 @@ function Profile() {
 export default Profile;
 
 function ProfileCard(props){
+    // const (name, age, greeting, children)
     return(
         <>
         <h2>Name: {props.name}</h2>
