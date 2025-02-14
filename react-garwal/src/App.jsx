@@ -1,11 +1,12 @@
 import React from "react";
 import { NetflixSeries } from "./components/NetflixSeries";
-
+import Profile from "./components/Profile";
 
 export default function App() {
   return (
     <>
-      <NetflixSeries />
+      <Profile />
+      {/* <NetflixSeries /> */}
       {/* <NetflixSeries />
       <NetflixSeries />
       <NetflixSeries />
