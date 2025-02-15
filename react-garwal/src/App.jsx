@@ -4,11 +4,11 @@ import Profile from "./components/Profile";
 
 export default function App() {
   return (
-    <>
+    <section className="container" >
       {/* <Profile /> */}
       <NetflixSeries />
       {/* <NetflixSeries /> */}
-    </>
+    </section>
   )
 }
 
