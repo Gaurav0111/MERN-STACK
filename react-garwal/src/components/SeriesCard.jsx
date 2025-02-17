@@ -1,3 +1,4 @@
+import styles from './Netflix.module.css'
 import "./Netflix.css";
 
 const SeriesCard = (props) => {
@@ -13,7 +14,7 @@ const SeriesCard = (props) => {
         // backgroundColor: "rgb(49, 175, 175)",
         borderRadius: "1rem"
     }
-    return (<li className="card" >
+    return (<li className={styles.card} >
         <div>
             <div>
                 <img src={img_url} alt={img_url} width="40%" height="40%" />
