@@ -5,7 +5,7 @@ const SeriesCard = (props) => {
     const { id, img_url, name, rating, description, cast, genre, watch_url } = props.data;
     const styling = {
         margin: "1rem 1rem"
-    }  
+    }    
     const buttonStyling = {
         padding: "1.2rem 2.4rem",
         fontSize: "1.6rem",
