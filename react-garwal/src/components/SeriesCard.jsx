@@ -19,10 +19,10 @@ const SeriesCard = (props) => {
             <div>
                 <img src={img_url} alt={img_url} width="40%" height="40%" />
             </div>
-            <div className="card-content" >
+            <div className={styles["card-content"]} >
                 <h3>Name: {name}</h3>
                 <h3>
-                    Rating: <span className={`rating ${rating >= 8.5 ? "super_hit" : "average"}`} >
+                    Rating: <span className={`{styles.rating} ${rating >= 8.5 ? styles.super_hit : styles.average}`} >
                         {rating}
                     </span>
                 </h3>
