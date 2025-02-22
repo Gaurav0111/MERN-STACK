@@ -1,5 +1,6 @@
 import styles from './Netflix.module.css'
 import "./Netflix.css";
+import styled from "styled-components";
 
 const SeriesCard = (props) => {
     let age = 154;
@@ -14,8 +15,8 @@ const SeriesCard = (props) => {
         fontSize: "1.6rem",
         backgroundColor: `${rating >= 8.5 ? "rgb(49, 175, 175)" : "#ffff00"}`,
         // backgroundColor: "rgb(49, 175, 175)",
-        borderRadius: "1rem"
-    })
+        borderRadius: "1rem",
+    });
     return (<li className={styles.card} >
         <div>
             <div>
