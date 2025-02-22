@@ -4,16 +4,18 @@ import "./Netflix.css";
 const SeriesCard = (props) => {
     let age = 154;
     const { id, img_url, name, rating, description, cast, genre, watch_url } = props.data;
+
     const styling = {
         margin: "1rem 1rem"
-    }     
-    const buttonStyling = {
+    }
+    // const buttonStyling = {
+    const buttonStyleComponent = styled.button({
         padding: "1.2rem 2.4rem",
         fontSize: "1.6rem",
         backgroundColor: `${rating >= 8.5 ? "rgb(49, 175, 175)" : "#ffff00"}`,
         // backgroundColor: "rgb(49, 175, 175)",
         borderRadius: "1rem"
-    }
+    })
     return (<li className={styles.card} >
         <div>
             <div>
@@ -31,7 +33,8 @@ const SeriesCard = (props) => {
                 <p style={styling} >Genre: {genre}</p>
                 <p style={{ margin: "1rem 1rem" }} >Cast: {cast}</p>
                 <a href={watch_url} target="_blank" >
-                    <button style={buttonStyling}>{age > 18 ? "Watch Now" : "Not Available"}</button>
+                    {/* <button style={buttonStyling}>{age > 18 ? "Watch Now" : "Not Available"}</button> */}
+                    <buttonStyleComponent >{age > 18 ? "Watch Now" : "Not Available"}</buttonStyleComponent>
                 </a>
             </div>
         </div>
